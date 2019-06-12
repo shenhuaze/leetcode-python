@@ -1,14 +1,11 @@
 
 def two_sum(nums, target):
-    result = []
     dic = {}
     for i in range(len(nums)):
         if nums[i] in dic:
-            result.append(dic[nums[i]])
-            result.append(i)
-            break
+            return [dic[nums[i]], i]
         dic[target - nums[i]] = i
-    return result
+    return []
 
 
 if __name__ == "__main__":
