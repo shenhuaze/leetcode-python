@@ -20,12 +20,12 @@ def my_atoi(str):
                 return max_int
             else:
                 return min_int
-        base = base * 10 + ord(str[i]) - ord('0')
+        base = ord(str[i]) - ord('0') + base * 10
         i += 1
     return sign * base
 
 
 if __name__ == "__main__":
-    str_ = "  -43"
+    str_ = "  -42"
     print(my_atoi(str_))
 
